@@ -147,10 +147,13 @@ After seeding the database, these users are available:
 ```bash
 composer install
 cp .env.example .env
+touch database/database.sqlite
 php artisan key:generate
 php artisan migrate:fresh --seed
 php artisan serve
 ```
+
+The default local setup uses SQLite, so the `database/database.sqlite` file must exist before running migrations.
 
 Start here in the browser:
 
